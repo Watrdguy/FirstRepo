@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Centered Container</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      width: 300px;
+      padding: 20px;
+      background: black;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      text-align: center;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="container" id="clk">
+  </h1>
+
+  <script>
+    function updateClock(){
+      const now = new Date();
+      const time = now.toLocaleTimeString();
+      document.getElementById("clk").textContent = time;
+    }
+
+    setInterval(updateClock, 1000)
+    updateClock()
+  </script>
+</body>
+</html>
